@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "901eda77-b65a-4a61-aa13-5a9da76609e5",
+		"name": "Procument_Ofbiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Purchase Order List By Order Name",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "www.google.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "2133423",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{IP_PORT}}/restcomponent/procurement/get-order-list/BGL/2020",
+					"protocol": "http",
+					"host": [
+						"{{IP_PORT}}"
+					],
+					"path": [
+						"restcomponent",
+						"procurement",
+						"get-order-list",
+						"BGL",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Supplier List By Supplier Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{IP_PORT}}/restcomponent/procurement/get-supplier-list/fem",
+					"protocol": "http",
+					"host": [
+						"{{IP_PORT}}"
+					],
+					"path": [
+						"restcomponent",
+						"procurement",
+						"get-supplier-list",
+						"fem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Supplier by  Supplier Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{IP_PORT}}/restcomponent/procurement/get-supplier/81440",
+					"protocol": "http",
+					"host": [
+						"{{IP_PORT}}"
+					],
+					"path": [
+						"restcomponent",
+						"procurement",
+						"get-supplier",
+						"81440"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get PO Details By Order Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{IP_PORT}}/restcomponent/procurement/get-po-details/BGL/91788",
+					"protocol": "http",
+					"host": [
+						"{{IP_PORT}}"
+					],
+					"path": [
+						"restcomponent",
+						"procurement",
+						"get-po-details",
+						"BGL",
+						"91788"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consume Order ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\" : \"null\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{IP_PORT}}/restcomponent/procurement/update",
+					"protocol": "http",
+					"host": [
+						"{{IP_PORT}}"
+					],
+					"path": [
+						"restcomponent",
+						"procurement",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "IP_PORT",
+			"value": "192.168.70.32:8080"
+		},
+		{
+			"key": "port",
+			"value": "192.168.190.82:8080"
+		}
+	]
+}
